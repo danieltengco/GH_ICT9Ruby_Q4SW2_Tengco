@@ -1,0 +1,47 @@
+
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<title>Time Converter</title>
+</head>
+<body>
+	<br>
+	<div align="center" class="container bg-warning"><br>
+	<h1 style="font-family: Broadway;"><b>Time Converter</b></h1><br>
+	<p><i>How much time do you have in a day?</i></p>
+	<img src="https://static.vecteezy.com/system/resources/previews/008/957/233/original/animated-calendar-for-time-management-for-business-icon-clipart-vector.jpg" height="200">
+	<br>
+	<br>
+	<input type="text" id="id1" placeholder="Enter the number of days">&nbsp;Days<br><br>
+	<input type="submit" class="btn-danger" value="Convert to Seconds" onclick="SecondFunction()">&nbsp;
+	<input type="submit" class="btn-success" value="Convert to Minutes" onclick="MinuteFunction()">&nbsp;
+	<input type="submit" class="btn-info" value="Convert to Hours" onclick="HourFunction()"><br><br>
+	<p id="given"></p>
+	<p id="answer"></p>
+	<script>
+		function SecondFunction() {
+			var days = document.getElementById('id1').value;
+			var seconds = Number(days) * 86400;
+			document.getElementById('given').innerHTML = days + " days is equal to";
+			document.getElementById('answer').innerHTML = seconds + " seconds";
+		}
+	</script><br>
+	<script>
+		function MinuteFunction() {
+			var days = document.getElementById('id1').value;
+			var minutes = Number(days) * 1440;
+			document.getElementById('given').innerHTML = days + " days is equal to";
+			document.getElementById('answer').innerHTML = minutes + " minutes";
+		}
+	</script><br>
+	<script>
+		function HourFunction() {
+			var days = document.getElementById('id1').value;
+			var hours = Number(days) * 24;
+			document.getElementById('given').innerHTML = days + " days is equal to";
+			document.getElementById('answer').innerHTML = hours + " hours";
+		}
+	</script><br>
+	</div>
+</body>
+</html>
